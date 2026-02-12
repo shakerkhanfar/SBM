@@ -1,0 +1,212 @@
+{
+  "channel": {
+    "telephone": "Telephone",
+    "web": "Web"
+  },
+  "drawer": {
+    "actions": {
+      "audioLoadError": "Failed to load audio recording, please try again",
+      "downloadRecording": "Download Recording",
+      "joinCall": "Monitor The Call",
+      "joinCallAsListener": "Start Live Monitoring",
+      "joinCallDescription": "Join the call as a listener to monitor the conversation in real-time",
+      "joiningCall": "Joining as listener...",
+      "leaveRoom": "Leave Call",
+      "liveCall": "Live Call",
+      "loadingAudio": "Loading audio...",
+      "mute": "Mute",
+      "noRecordingAvailable": "No recording available",
+      "noRecordingDescription": "No conversation data available for this call",
+      "playRecording": "Play Recording",
+      "processingCallData": "Processing call data, please wait...",
+      "room": "Room",
+      "sendInstructionDescription": "Send real-time instructions to the agent during the call",
+      "sendInstructionPlaceholder": "Send instruction to agent...",
+      "unmute": "Unmute"
+    },
+    "close": "Close",
+    "credits": "credits",
+    "errorLoadingData": "Error loading data",
+    "unknown": "Unknown",
+    "fields": {
+      "agentName": "Agent Name",
+      "agentType": "Agent Type",
+      "asrProcessing": "ASR Processing",
+      "callerId": "Caller ID",
+      "channel": "Channel",
+      "customerSatisfaction": "Customer Satisfaction",
+      "duration": "Duration",
+      "greetingMessage": "Greeting Message",
+      "language": "Language",
+      "latency": "Latency",
+      "llmResponse": "LLM Response",
+      "model": "Model",
+      "negative": "Negative",
+      "neutral": "Neutral",
+      "positive": "Positive",
+      "resolutionType": "Resolution Type",
+      "sentiment": "Sentiment",
+      "sessionId": "Call ID",
+      "startTime": "Start Time",
+      "statusCode": "Status code",
+      "totalProcessingTime": "Total Processing",
+      "ttsGeneration": "TTS Generation",
+      "voiceName": "Voice",
+      "wordCount": "Word Count"
+    },
+    "outcome": {
+      "noData": "No Outcome Data",
+      "noDataDescription": "No outcome data available for this call"
+    },
+    "retry": "Retry",
+    "search": {
+      "all": "All",
+      "placeholder": "Search transcript...",
+      "speaker": "Speaker"
+    },
+    "sections": {
+      "callMetrics": "Call Metrics",
+      "failureReason": "Failure Reason",
+      "outcome": "Call Outcome",
+      "performanceMetrics": "Performance Metrics",
+      "sessionInfo": "Call Information",
+      "summary": "AI Summary",
+      "transcript": "Transcript"
+    },
+    "tabs": {
+      "conversation": "Conversation",
+      "logs": "Logs",
+      "outcome": "Outcome",
+      "overview": "Overview"
+    },
+    "transcription": {
+      "active": "Active",
+      "clear": "Clear",
+      "inactive": "Inactive",
+      "listening": "Listening for speech...",
+      "liveTranscription": "Live Transcription",
+      "liveTranscriptionActive": "Live Transcription Active",
+      "noTranscription": "No transcription available",
+      "participants": "Participants",
+      "segments": "segments",
+      "startSpeaking": "Waiting for speakers to start talking",
+      "transcription": "Transcription",
+      "typing": "Typing...",
+      "waitingForSpeech": "Waiting for speech..."
+    }
+  },
+  "list": {
+    "noResults": "No calls found"
+  },
+  "page": {
+    "description": "View and manage your conversation history",
+    "title": "Call History"
+  },
+  "status": {
+    "completed": "Completed",
+    "failed": "Failed",
+    "forwarded": "Forwarded",
+    "inProgress": "In Progress",
+    "noAnswer": "No Answer",
+    "pending": "Pending"
+  },
+  "table": {
+    "actions": {
+      "add": "Add Call",
+      "addDescription": "Add a new call record to your history.",
+      "detailsOnlyForCompleted": "Details are only available for completed calls.",
+      "export": "Export",
+      "exportDescription": "Export the current page's call history as a CSV file.",
+      "exportCurrentPage": "Export Current Page",
+      "exportWithFilters": "Export with Filters",
+      "exportNoDataDescription": "No data available to export",
+      "filter": "Filter",
+      "filterDescription": "Filter call records by date, agent, or status.",
+      "viewDetails": "View Details"
+    },
+    "columns": {
+      "agent": "Agent",
+      "agentNumber": "Agent Number",
+      "channel": "Channel",
+      "channelPhone": "Phone",
+      "channelUnknown": "Unknown",
+      "channelVoiceagent": "Voice Agent",
+      "channelWeb": "Web",
+      "channelWhatsapp": "WhatsApp",
+      "clientNumber": "User Number",
+      "cost": "Cost",
+      "duration": "Duration",
+      "durationNotAvailable": "N/A",
+      "status": "Status",
+      "time": "Time",
+      "timestamp": "Timestamp",
+      "id": "ID"
+    },
+    "search": {
+      "placeholder": "Search By Call ID, User Number, or Agent ID"
+    },
+    "copy": {
+      "agentIdCopied": "Agent ID copied to clipboard",
+      "agentNameCopied": "Agent name copied to clipboard",
+      "copyFailed": "Failed to copy to clipboard"
+    },
+    "emptyState": {
+      "description": "No calls yet. Start your first call to see history.",
+      "title": "No conversations found"
+    },
+    "labels": {
+      "credit": "credit",
+      "credits": "credits",
+      "id": "ID"
+    },
+    "time": {
+      "hours": "h",
+      "milliseconds": "ms",
+      "minutes": "m",
+      "seconds": "s",
+      "secondsFull": "seconds"
+    },
+    "title": "Call History"
+  },
+  "export": {
+    "dialog": {
+      "title": "Export Call History",
+      "description": "Select date range and agent to export call history data",
+      "cancel": "Cancel",
+      "export": "Export",
+      "exporting": "Exporting..."
+    },
+    "filters": {
+      "agentList": {
+        "label": "Agent",
+        "placeholder": "Select an agent"
+      },
+      "dateRange": {
+        "label": "Date Range",
+        "all": "All",
+        "lastHour": "Last hour",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "thisWeek": "This week (from Sunday)",
+        "thisMonth": "This month",
+        "custom": "Custom",
+        "selectDateRange": "Select date range",
+        "to": "to",
+        "done": "Done",
+        "noFutureDates": "Future dates are not allowed"
+      },
+      "status": {
+        "label": "Status",
+        "placeholder": "Select status",
+        "all": "All"
+      }
+    },
+    "success": "Call history exported successfully",
+    "errors": {
+      "noProject": "No project selected",
+      "selectAgent": "Please select an agent",
+      "selectDateRange": "Please select a date range",
+      "failed": "Failed to export call history"
+    }
+  }
+}
