@@ -6,7 +6,7 @@
     "dev": "pnpm --parallel --filter @sbm/web --filter @sbm/server dev",
     "dev:web": "pnpm --filter @sbm/web dev",
     "dev:server": "pnpm --filter @sbm/server dev",
-    "build": "pnpm --filter @sbm/web build",
+    "build": "pnpm -F @sbm/web build",
     "check-types": "pnpm -r check-types"
   }
 }
