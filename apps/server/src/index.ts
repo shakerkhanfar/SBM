@@ -1,6 +1,11 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -150,6 +155,14 @@ app.get('/api/chatkit/threads/:threadId/messages', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch messages' });
   }
 });
+
+if (process.env.NODE_ENV === 'production') {
+  const webDistPath = path.resolve(__dirname, '../../web/dist');
+  app.use(express.static(webDistPath));
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(webDistPath, 'index.html'));
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
