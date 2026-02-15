@@ -6,9 +6,9 @@
     "dev": "pnpm --parallel --filter @sbm/web --filter @sbm/server dev",
     "dev:web": "pnpm --filter @sbm/web dev",
     "dev:server": "pnpm --filter @sbm/server dev",
-    "build": "cd apps/server && pnpm build && cd ../web && pnpm build",
-    "build:web": "cd apps/web && pnpm build",
-    "build:server": "cd apps/server && pnpm build",
+    "build": "pnpm --filter @sbm/server run build && pnpm --filter @sbm/web run build",
+    "build:web": "pnpm --filter @sbm/web run build",
+    "build:server": "pnpm --filter @sbm/server run build",
     "check-types": "pnpm -r check-types"
   }
 }
