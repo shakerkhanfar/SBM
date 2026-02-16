@@ -7,6 +7,8 @@ import { useIsRTL } from '@/hooks/use-is-rtl';
 import { LogEvent } from '@/types/logs.types';
 import { cn } from '@/utils/cn';
 
+import { useAnalysisQuery } from '@/features/call-history/hooks/use-analysis.hook';
+
 import { AudioPlayer } from './audio-player';
 import { ConversationTab } from './conversation-tab';
 import { CallDetailsHeader } from './header';
@@ -93,6 +95,17 @@ export const CallDetailsDrawer: React.FC<CallDetailsDrawerProps> = ({
     {
       enabled: !!call?.id && isOpen,
     },
+  );
+
+  // Compute transcription length for analysis cache key
+  const transcriptionLength =
+    conversationDetailsQuery.data?.jobResponse?.transcription?.length || 0;
+
+  // AI Analysis query
+  const analysisQuery = useAnalysisQuery(
+    call?.id,
+    'voice_call',
+    transcriptionLength,
   );
 
   // Handle joining call as listener
@@ -494,7 +507,7 @@ export const CallDetailsDrawer: React.FC<CallDetailsDrawerProps> = ({
 
       {/* Main drawer */}
       <div
-        className={`fixed top-0 z-50 h-[calc(100vh-58px)] border-l border-border bg-background shadow-xl transition-all duration-300 ease-in-out ${
+        className={`fixed top-0 z-50 h-screen border-l border-border bg-background shadow-xl transition-all duration-300 ease-in-out ${
           isRtl ? 'left-0 border-l-0 border-r' : 'right-0'
         } ${isRtl ? 'lg:left-0 lg:border-l-0 lg:border-r' : 'lg:right-0'} ${
           `w-full ${widthClassName}`

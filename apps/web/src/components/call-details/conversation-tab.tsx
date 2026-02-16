@@ -209,7 +209,7 @@ export const ConversationTab: React.FC<ConversationTabProps> = ({
           >
             <p
               className="break-words text-start text-sm leading-relaxed"
-              style={{ wordBreak: 'break-all' }}
+              style={{ wordBreak: 'break-word' }}
             >
               {message}
             </p>

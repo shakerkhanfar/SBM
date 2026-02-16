@@ -2,7 +2,6 @@ import { FileText, Copy } from 'lucide-react';
 import React, { useMemo } from 'react';
 import { toast } from 'sonner';
 
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -115,40 +114,6 @@ export const OutcomeTab: React.FC<OutcomeTabProps> = ({ callDetails }) => {
   return (
     <div className="flex-1 overflow-y-auto p-6">
       <div className="space-y-6">
-        {/* Call Summary */}
-        <Card className="hidden">
-          <CardHeader>
-            <CardTitle className="text-lg">
-              {'AI Summary'}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="hidden">
-              <h4 className="mb-2 font-medium">AI Summary</h4>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {callDetails.aiSummary}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <span className="text-sm text-muted-foreground">Outcome:</span>
-                <Badge className="ml-2 border-green-200 bg-green-100 text-green-700">
-                  {callDetails.outcome}
-                </Badge>
-              </div>
-              <div>
-                <span className="text-sm text-muted-foreground">
-                  Resolution:
-                </span>
-                <span className="ml-2 text-sm font-medium">
-                  {callDetails.resolutionType}
-                </span>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
         {/* Outcome Data */}
         {outcomeResult && Object.keys(outcomeResult).length > 0 ? (
           <div className="!mt-0 space-y-4">
